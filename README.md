@@ -16,21 +16,30 @@ Extends L.geoJSON to support the [simplestyle](https://github.com/mapbox/simples
 **Step 2.** Set the `useSimpleStyle` option to true when adding your geojson
 
 ````
-    const point = {
+    const rect = {
       "type": "Feature",
       "properties": {
-        "stroke-width": 10
+        "fill": "yellow"
       },
       "geometry": {
-        "type": "Point",
+        "type": "Polygon",
         "coordinates": [
-          67.592041,
-          40.446947
+          [
+            [
+              10.45007,
+              -10.359502
+            ],
+            ...
+            [
+              10.45007,
+              -10.359502
+            ]
+          ]
         ]
       }
-    }
+    },
 
-    L.geoJSON(point, {
+    L.geoJSON(rect, {
         useSimpleStyle: true
     }).addTo(map);
 ````
@@ -41,7 +50,7 @@ Extends L.geoJSON to support the [simplestyle](https://github.com/mapbox/simples
 
 For example
 ````
-    const myLayer = L.geoJSON(point, {
+    const myLayer = L.geoJSON(rect, {
         useSimpleStyle: false
     }).addTo(map);
 
