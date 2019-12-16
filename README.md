@@ -1,11 +1,13 @@
 # leaflet-simplestyle
-Extends L.geoJSON to support the [simplestyle](https://github.com/mapbox/simplestyle-spec) spec. 
+Extends [`L.geoJSON`](https://leafletjs.com/reference-1.3.4.html#geojson) to support the [simplestyle](https://github.com/mapbox/simplestyle-spec) spec with less than 1kb of code. 
 
 ### Installing
-`npm install leaflet-simplestyle`
+````
+npm install leaflet-simplestyle
+````
 
 ### Usage
-**Step 1.** Include the required js in your document 
+**Step 1.** Include the library after you've included leafletjs.
 
 ```
     require('leaflet-simplestyle')
@@ -13,7 +15,7 @@ Extends L.geoJSON to support the [simplestyle](https://github.com/mapbox/simples
     <script src="leaflet-simplestyle/dist/leaflet-simplestyle.min.js"></script>
 ```
 
-**Step 2.** Set the `useSimpleStyle` option to true when adding your geojson
+**Step 2.** Set the `useSimpleStyle` option to `true` when adding your [`L.geoJSON`](https://leafletjs.com/reference-1.3.4.html#geojson) layer
 
 ````
     const rect = {
@@ -45,7 +47,7 @@ Extends L.geoJSON to support the [simplestyle](https://github.com/mapbox/simples
 ````
 
 ### Methods
-- `useSimpleStyle()`, add's simple styling to a `L.geoJSON` object
+- `useSimpleStyle()`, adds simple styling to a `L.geoJSON` object
 - `discardSimpleStyle()`, Removes simple styling from a `L.geoJSON` object
 
 For example
