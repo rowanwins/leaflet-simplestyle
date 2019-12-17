@@ -1,6 +1,6 @@
 {
   "name": "leaflet-simplestyle",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A small module for incorporating incorporating simple style on geojson layers in leafletjs",
   "main": "dist/leaflet-simplestyle.min.js",
   "dependencies": {
@@ -13,6 +13,11 @@
     "build": "rollup -c",
     "dev": "rollup -c -w"
   },
-  "author": "",
-  "license": "MIT"
+  "author": "Rowan Winsemius",
+  "license": "MIT",
+  "keywords": [
+    "leaflet",
+    "simplestyle",
+    "geojson"
+  ]
 }

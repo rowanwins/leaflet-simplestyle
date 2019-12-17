@@ -1,6 +1,8 @@
 # leaflet-simplestyle
 Extends [`L.geoJSON`](https://leafletjs.com/reference-1.3.4.html#geojson) to support the [simplestyle](https://github.com/mapbox/simplestyle-spec) spec with less than 1kb of code. 
 
+[Check out the demo](https://rowanwins.github.io/leaflet-simplestyle/example/basic.html)
+
 ### Installing
 ````
 npm install leaflet-simplestyle
