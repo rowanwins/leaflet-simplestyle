@@ -15,6 +15,8 @@ npm install leaflet-simplestyle
     require('leaflet-simplestyle')
     // or
     <script src="leaflet-simplestyle/dist/leaflet-simplestyle.min.js"></script>
+    // or via CDN
+    <script src="https://unpkg.com/leaflet-simplestyle"></script>
 ```
 
 **Step 2.** Set the `useSimpleStyle` option to `true` when adding your [`L.geoJSON`](https://leafletjs.com/reference-1.3.4.html#geojson) layer
