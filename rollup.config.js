@@ -1,4 +1,4 @@
-import { terser } from 'rollup-plugin-terser'
+import {terser} from 'rollup-plugin-terser'
 
 const output = (outputName, plugins) => ({
     input: './src/main.js',
