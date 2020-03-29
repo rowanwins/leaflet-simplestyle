@@ -35,10 +35,7 @@
     }).addTo(map);
 
     const layer = L.geoJSON(fc, {
-        useSimpleStyle: true,
-        pointToLayer: function(geoJsonPoint, latlng) {
-            return L.circleMarker(latlng);
-        }
+        useSimpleStyle: true
     }).addTo(map);
 
     function toggleSimpleStyling () {

@@ -1,0 +1,14 @@
+{
+  "extends": "mourner",
+  "globals": {
+    "L": true
+  },
+  "rules": {
+    "space-before-function-paren": 0,
+    "semi": 0,
+    "prefer-arrow-callback": 0,
+    "arrow-body-style": 0,
+    "no-invalid-this": 0,
+    "object-shorthand": 0
+  }
+}
