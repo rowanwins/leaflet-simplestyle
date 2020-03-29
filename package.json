@@ -4,8 +4,11 @@
   "description": "A small module for incorporating incorporating simple style on geojson layers in leafletjs",
   "main": "dist/leaflet-simplestyle.min.js",
   "dependencies": {
+    "@mapbox/sanitize-caja": "0.1.4"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "11.0.2",
+    "@rollup/plugin-node-resolve": "7.1.1",
     "rollup": "^1.27.13",
     "rollup-plugin-terser": "^5.1.3"
   },

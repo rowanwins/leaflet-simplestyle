@@ -66,7 +66,9 @@ const fc = {
     {
       "type": "Feature",
       "properties": {
-        "stroke-width": 10
+        "stroke-width": 10,
+        "marker-color": "#00F",
+        "marker-symbol": "bus",
       },
       "geometry": {
         "type": "Point",
@@ -77,4 +79,4 @@ const fc = {
       }
     }
   ]
-}
+};

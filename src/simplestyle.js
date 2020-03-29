@@ -21,7 +21,7 @@ var mapping = [
     ['fill-opacity', 'fillOpacity']
 ];
 
-function fallback(a, b) {
+function fallback (a, b) {
     var c = {};
     for (var k in b) {
         if (a[k] === undefined) c[k] = b[k];
@@ -30,7 +30,7 @@ function fallback(a, b) {
     return c;
 }
 
-function remap(a) {
+function remap (a) {
     var d = {};
     for (var i = 0; i < mapping.length; i++) {
         d[mapping[i][1]] = a[mapping[i][0]];
@@ -38,6 +38,6 @@ function remap(a) {
     return d;
 }
 
-export function style(feature) {
+export default function simplestyle (feature) {
     return remap(fallback(feature.properties || {}, defaults));
 }
