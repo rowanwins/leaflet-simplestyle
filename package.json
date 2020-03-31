@@ -12,7 +12,8 @@
   },
   "scripts": {
     "build": "rollup -c",
-    "dev": "rollup -c -w"
+    "dev": "rollup -c -w",
+    "lint": "eslint src/ --fix"
   },
   "author": "Rowan Winsemius",
   "license": "MIT",
