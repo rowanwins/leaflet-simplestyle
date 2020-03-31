@@ -1,4 +1,4 @@
-import {style, getIcon} from './simplestyle'
+import {style, getIcon} from './simplestyle';
 
 L.GeoJSON.include({
 
@@ -19,11 +19,11 @@ L.GeoJSON.include({
         if (!this.options.useSimpleStyle) {
             this.eachLayer(function (l) {
                 if (l.options.icon !== undefined) {
-                    l.setIcon(getIcon(l.feature.properties))
+                    l.setIcon(getIcon(l.feature.properties));
                 }
-            })
+            });
             this.setStyle(style);
-            this.options.useSimpleStyle = true
+            this.options.useSimpleStyle = true;
         }
     },
 
@@ -31,13 +31,13 @@ L.GeoJSON.include({
         if (this.options.useSimpleStyle) {
             this.eachLayer(function (l) {
                 if (l.options.icon !== undefined) {
-                    l.setIcon(L.Icon.Default.prototype)
+                    l.setIcon(L.Icon.Default.prototype);
                 }
-            })
+            });
             this.resetStyle();
-            this.options.useSimpleStyle = false
+            this.options.useSimpleStyle = false;
         }
     }
-})
+});
 
-L.GeoJSON.addInitHook('_useSimpleStyle')
+L.GeoJSON.addInitHook('_useSimpleStyle');

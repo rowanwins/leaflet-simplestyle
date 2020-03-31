@@ -22,7 +22,7 @@
         ['fill-opacity', 'fillOpacity']
     ];
 
-    function fallback(a, b) {
+    function fallback (a, b) {
         const c = {};
         for (const k in b) {
             if (a[k] === undefined) c[k] = b[k];
@@ -31,7 +31,7 @@
         return c;
     }
 
-    function remap(a) {
+    function remap (a) {
         const d = {};
         for (let i = 0; i < mapping.length; i++) {
             d[mapping[i][1]] = a[mapping[i][0]];
@@ -39,15 +39,13 @@
         return d;
     }
 
-
-    function style(feature) {
+    function style (feature) {
         return remap(fallback(feature.properties || {}, defaults));
     }
 
-
     // Pinched from mapbox.js
     // https://github.com/mapbox/mapbox.js/blob/publisher-production/src/marker.js
-    function getIcon(fp) {
+    function getIcon (fp) {
         fp = fp || {};
         const sizes = {
                 small: [20, 25],
