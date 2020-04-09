@@ -1,5 +1,5 @@
 # leaflet-simplestyle
-Extends [`L.geoJSON`](https://leafletjs.com/reference-1.3.4.html#geojson) to support the [simplestyle](https://github.com/mapbox/simplestyle-spec) spec with less than 1kb of code. 
+Extends [`L.geoJSON`](https://leafletjs.com/reference-1.3.4.html#geojson) to support the [simplestyle](https://github.com/mapbox/simplestyle-spec) spec with 2kb of code. 
 
 [Check out the demo](https://rowanwins.github.io/leaflet-simplestyle/example/basic.html)
 
@@ -15,9 +15,13 @@ npm install leaflet-simplestyle
     require('leaflet-simplestyle')
     // or
     <script src="leaflet-simplestyle/dist/leaflet-simplestyle.min.js"></script>
+    // or via CDN
+    <script src="https://unpkg.com/leaflet-simplestyle"></script>
 ```
 
-**Step 2.** Set the `useSimpleStyle` option to `true` when adding your [`L.geoJSON`](https://leafletjs.com/reference-1.3.4.html#geojson) layer
+**Step 2.** Set the `useSimpleStyle` option to `true` when adding your [`L.geoJSON`](https://leafletjs.com/reference-1.3.4.html#geojson) layer. 
+
+You can also chose whether to support the [Maki Icon Library](https://github.com/mapbox/maki) using the `useMakiMarkers` property, this enables support for the `marker-symbol` property, however it does require calling the Mapbox API. If `useMakiMarkers=false` an inline SVG icon is still available which adjusts size and color.
 
 ````
     const rect = {
@@ -44,7 +48,8 @@ npm install leaflet-simplestyle
     },
 
     L.geoJSON(rect, {
-        useSimpleStyle: true
+        useSimpleStyle: true,
+        useMakiMarkers: true
     }).addTo(map);
 ````
 

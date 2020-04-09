@@ -81,6 +81,7 @@ const fc = {
           'properties': {
             'marker-size': 'medium',
             'marker-color': '#3183aa',
+            'marker-symbol': 'bus'
           },
           'geometry': {
             'type': 'Point',

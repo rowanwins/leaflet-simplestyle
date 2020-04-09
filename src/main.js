@@ -4,39 +4,32 @@ L.GeoJSON.include({
 
     options: {
         useSimpleStyle: false,
-        pointToLayer: function (feature, latlng) {
-            return L.marker(latlng, {
-                icon: getIcon(feature.properties)
-            });
-        }
+        useMakiMarkers: false
     },
 
     _useSimpleStyle: function () {
-        if (this.options.useSimpleStyle) this.setStyle(style);
+        if (this.options.useSimpleStyle) this.useSimpleStyle();
     },
 
     useSimpleStyle: function () {
-        if (!this.options.useSimpleStyle) {
-            this.eachLayer(function (l) {
-                if (l.options.icon !== undefined) {
-                    l.setIcon(getIcon(l.feature.properties))
-                }
-            })
-            this.setStyle(style);
-            this.options.useSimpleStyle = true
-        }
+        this.options.useSimpleStyle = true
+        const that = this
+        this.eachLayer(function (l) {
+            if ('icon' in l.options) {
+                l.setIcon(getIcon(l.feature.properties, that.options.useMakiMarkers))
+            }
+        })
+        this.setStyle(style);
     },
 
     discardSimpleStyle: function () {
-        if (this.options.useSimpleStyle) {
-            this.eachLayer(function (l) {
-                if (l.options.icon !== undefined) {
-                    l.setIcon(L.Icon.Default.prototype)
-                }
-            })
-            this.resetStyle();
-            this.options.useSimpleStyle = false
-        }
+        this.options.useSimpleStyle = false
+        this.eachLayer(function (l) {
+            if (l.options.icon !== undefined) {
+                l.setIcon(L.Icon.Default.prototype)
+            }
+        })
+        this.resetStyle();
     }
 })
 

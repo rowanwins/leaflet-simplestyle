@@ -35,7 +35,8 @@
     }).addTo(map);
 
     const layer = L.geoJSON(fc, {
-        useSimpleStyle: true
+        useSimpleStyle: true,
+        useMakiMarkers: true
     }).addTo(map);
 
     function toggleSimpleStyling () {
