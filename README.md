@@ -1,5 +1,5 @@
 # leaflet-simplestyle
-Extends [`L.geoJSON`](https://leafletjs.com/reference-1.3.4.html#geojson) to support the [simplestyle](https://github.com/mapbox/simplestyle-spec) spec with 2kb of code. 
+Extends [`L.geoJSON`](https://leafletjs.com/reference-1.3.4.html#geojson) to support the [simplestyle](https://github.com/mapbox/simplestyle-spec) spec. 
 
 [Check out the demo](https://rowanwins.github.io/leaflet-simplestyle/example/basic.html)
 
@@ -56,6 +56,7 @@ You can also chose whether to support the [Maki Icon Library](https://github.com
 ### Methods
 - `useSimpleStyle()`, adds simple styling to a `L.geoJSON` object
 - `discardSimpleStyle()`, Removes simple styling from a `L.geoJSON` object
+- `toggleMakiMarkers()`, Toggles the maki marker styling on a `L.geoJSON` object
 
 For example
 ````

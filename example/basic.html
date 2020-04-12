@@ -22,7 +22,10 @@
 
 <div id="mapid" style="width: 600px; height: 400px;"></div>
 <button onclick="toggleSimpleStyling();">Toggle Simple Styling</button>
+<button onclick="toggleMaki();">Toggle Maki Markers</button>
+
 <h3>Using simple style: <span id="amUsingStyling">true</span></h3>
+<h3>Using Maki Markers: <span id="amUsingMaki">true</span></h3>
 
 <script>
 
@@ -36,13 +39,18 @@
 
     const layer = L.geoJSON(fc, {
         useSimpleStyle: true,
-        useMakiMarkers: true
+        useMakiMarkers: false
     }).addTo(map);
 
     function toggleSimpleStyling () {
         if (!layer.options.useSimpleStyle) layer.useSimpleStyle();
         else layer.discardSimpleStyle();
         document.getElementById("amUsingStyling").innerHTML = layer.options.useSimpleStyle;
+    }
+
+    function toggleMaki () {
+        layer.toggleMakiMarkers();
+        document.getElementById("amUsingMaki").innerHTML = layer.options.useMakiMarkers;
     }
 </script>
 </body>

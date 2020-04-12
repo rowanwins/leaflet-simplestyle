@@ -1,6 +1,6 @@
 {
   "name": "leaflet-simplestyle",
-  "version": "1.1.1",
+  "version": "1.2.1",
   "description": "A small module for incorporating incorporating simple style on geojson layers in leafletjs",
   "main": "dist/leaflet-simplestyle.min.js",
   "dependencies": {},

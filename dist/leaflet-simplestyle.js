@@ -55,14 +55,17 @@
           color = (fp['marker-color'] || '7e7e7e').replace('#', '');
    
       const sizes = {
-          small: [20, 25],
-          medium: [30, 39],
-          large: [35, 45]
+              small: [23, 23],
+              medium: [30, 30],
+              large: [37, 37]
       };
 
       const iconOptions = {
-          iconUrl: encodeURI(`data:image/svg+xml,<svg width='354' height='458' xmlns='http://www.w3.org/2000/svg'><path d='M177 0C79 0 0 79 0 177c0 95 163 270 170 277a9 9 0 0013 0c7-7 170-182 170-277C353 79 274 0 177 0z' fill='#${color}'/></svg>`).replace('#', '%23'),
+          iconUrl: encodeURI(`data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='15' height='15'><path d='M7.5 0C5.1 0 2.2 1.5 2.2 5.3c0 2.5 4 8.2 5.3 9.7 1-1.5 5.3-7 5.3-9.7C12.8 1.5 9.9 0 7.5 0z' fill='#${color}'/></svg>`).replace('#', '%23'),
           iconSize: sizes[size],
+          shadowUrl: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAABaBAMAAADA2vJjAAAAGFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABWNxwqAAAACHRSTlMACRcjKzJAOtxk//MAAABzSURBVDjL7ZDRDYAwCER1A3EDcQNxA3EDGzeoE2jX91JNTYoLaPr+eDkIUBUK/6TOarpongC1HCFKhrkXwNxRMiKqOslwO3TJODugcHEecT/Oa/BbgOMOqkZI3eHBvkyIvSrbaMfbJeyq9iB7dv6cQuFrnJu2IxWE6etQAAAAAElFTkSuQmCC',
+          shadowSize: sizes[size],
+          shadowAnchor: [sizes[size][0] / 2, sizes[size][1] / 2],
           iconAnchor: [sizes[size][0] / 2, sizes[size][1]],
           popupAnchor: [0, -sizes[size][1] / 2]
       };
@@ -73,7 +76,7 @@
               medium: [30, 70],
               large: [35, 90]
           };
-          const protocol = window.document.location.protocol;
+          let protocol = window.document.location.protocol === 'file:' ? 'https:/' : window.document.location.protocol;
           iconOptions.iconUrl = `${protocol}//a.tiles.mapbox.com/v3/marker/pin-${size.charAt(0)}${symbol}+${color}${L.Browser.retina ? '@2x' : ''}.png`;
           iconOptions.iconSize = makiSizes[size];
           iconOptions.iconAnchor = [makiSizes[size][0] / 2, makiSizes[size][1] / 2];
@@ -92,6 +95,11 @@
 
       _useSimpleStyle: function () {
           if (this.options.useSimpleStyle) this.useSimpleStyle();
+      },
+
+      toggleMakiMarkers: function () {
+          this.options.useMakiMarkers = !this.options.useMakiMarkers;
+          this._useSimpleStyle();
       },
 
       useSimpleStyle: function () {

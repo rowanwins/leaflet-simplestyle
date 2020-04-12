@@ -90,6 +90,20 @@ const fc = {
             40.446947
             ]
           }
+        },
+        {
+          'type': 'Feature',
+          'properties': {
+            'marker-size': 'large',
+            'marker-symbol': 'airport'
+          },
+          'geometry': {
+            'type': 'Point',
+            'coordinates': [
+            -10,
+            -10
+            ]
+          }
         }
     ]
 }

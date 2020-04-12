@@ -11,6 +11,11 @@ L.GeoJSON.include({
         if (this.options.useSimpleStyle) this.useSimpleStyle();
     },
 
+    toggleMakiMarkers: function () {
+        this.options.useMakiMarkers = !this.options.useMakiMarkers
+        this._useSimpleStyle()
+    },
+
     useSimpleStyle: function () {
         this.options.useSimpleStyle = true
         const that = this
