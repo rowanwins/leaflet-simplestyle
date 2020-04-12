@@ -75,7 +75,8 @@ export function getIcon(fp, useMakiMarkers) {
             medium: [30, 70],
             large: [35, 90]
         }
-        let protocol = window.document.location.protocol === 'file:' ? 'https:/' : window.document.location.protocol
+        let protocol = window.document.location.protocol
+        if (protocol.indexOf('http') === -1) protocol = 'https:'
         iconOptions.iconUrl = `${protocol}//a.tiles.mapbox.com/v3/marker/pin-${size.charAt(0)}${symbol.toLowerCase()}+${color}${L.Browser.retina ? '@2x' : ''}.png`
         iconOptions.iconSize = makiSizes[size]
         iconOptions.iconAnchor = [makiSizes[size][0] / 2, makiSizes[size][1] / 2]
