@@ -76,7 +76,7 @@ export function getIcon(fp, useMakiMarkers) {
             large: [35, 90]
         }
         let protocol = window.document.location.protocol === 'file:' ? 'https:/' : window.document.location.protocol
-        iconOptions.iconUrl = `${protocol}//a.tiles.mapbox.com/v3/marker/pin-${size.charAt(0)}${symbol}+${color}${L.Browser.retina ? '@2x' : ''}.png`
+        iconOptions.iconUrl = `${protocol}//a.tiles.mapbox.com/v3/marker/pin-${size.charAt(0)}${symbol.toLowerCase()}+${color}${L.Browser.retina ? '@2x' : ''}.png`
         iconOptions.iconSize = makiSizes[size]
         iconOptions.iconAnchor = [makiSizes[size][0] / 2, makiSizes[size][1] / 2]
         iconOptions.popupAnchor = [0, -makiSizes[size][1] / 2]
