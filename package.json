@@ -12,7 +12,8 @@
   },
   "scripts": {
     "build": "rollup -c",
-    "dev": "rollup -c -w"
+    "dev": "rollup -c -w",
+    "prepare": "npm run build"
   },
   "author": "Rowan Winsemius",
   "license": "MIT",
