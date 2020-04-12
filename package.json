@@ -16,6 +16,10 @@
   },
   "author": "Rowan Winsemius",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rowanwins/leaflet-simplestyle"
+  },
   "keywords": [
     "leaflet",
     "simplestyle",

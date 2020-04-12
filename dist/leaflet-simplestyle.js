@@ -55,9 +55,9 @@
           color = (fp['marker-color'] || '7e7e7e').replace('#', '');
    
       const sizes = {
-              small: [23, 23],
-              medium: [30, 30],
-              large: [37, 37]
+          small: [23, 23],
+          medium: [30, 30],
+          large: [37, 37]
       };
 
       const iconOptions = {
