@@ -5,7 +5,7 @@ const output = (outputName, plugins) => ({
     output: {
         name: 'leafletSimpleStyle',
         file: outputName,
-        format: 'iife'
+        format: 'umd'
     },
     plugins
 })

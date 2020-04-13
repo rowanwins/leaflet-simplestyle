@@ -1,5 +1,7 @@
-(function () {
-  'use strict';
+(function (factory) {
+  typeof define === 'function' && define.amd ? define(factory) :
+  factory();
+}((function () { 'use strict';
 
   // Pinched from mapbox.js
   // https://github.com/mapbox/mapbox.js/blob/publisher-production/src/simplestyle.js
@@ -127,4 +129,4 @@
 
   L.GeoJSON.addInitHook('_useSimpleStyle');
 
-}());
+})));
